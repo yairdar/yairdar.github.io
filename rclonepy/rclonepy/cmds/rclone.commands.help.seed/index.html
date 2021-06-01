@@ -14,7 +14,7 @@
     
     
       
-        <title>Rclone Wrapper Status - Material for MkDocs</title>
+        <title>Rclone Commands Adoption Status - Material for MkDocs</title>
       
     
     
@@ -22,10 +22,6 @@
       
         
         <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
-        
-          
-          
-          <meta name="theme-color" content="">
         
       
     
@@ -49,13 +45,17 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="gray" data-md-color-accent="gray">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="indigo">
   
     
     <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rclone-wrapper-status" class="md-skip">
+        <a href="#rclone-commands-adoption-status" class="md-skip">
           Skip to content
         </a>
       
@@ -93,12 +93,34 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Rclone Wrapper Status
+              Rclone Commands Adoption Status
             
           </span>
         </div>
       </div>
     </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="lime" data-md-color-accent="indigo" type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent="" type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 10a2 2 0 0 1 2 2 2 2 0 0 1-2 2 2 2 0 0 1-2-2 2 2 0 0 1 2-2m10-3a5 5 0 0 1 5 5 5 5 0 0 1-5 5H7a5 5 0 0 1-5-5 5 5 0 0 1 5-5h10M7 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3h10a3 3 0 0 0 3-3 3 3 0 0 0-3-3H7z"/></svg>
+            </label>
+          
+        
+      </form>
     
     
     
@@ -274,12 +296,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Rclone Wrapper Status
+          Rclone Commands Adoption Status
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Rclone Wrapper Status
+        Rclone Commands Adoption Status
       </a>
       
         
@@ -318,22 +340,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-commands" class="md-nav__link">
-    Available Commands:
+  <a href="#defered-commands" class="md-nav__link">
+    Defered Commands
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#skipped-commands-not-for-s3" class="md-nav__link">
-    Skipped Commands (not for s3)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skipped-interactive-commands" class="md-nav__link">
-    Skipped Interactive Commands
+  <a href="#unsopported-commands" class="md-nav__link">
+    Unsopported Commands
   </a>
   
 </li>
@@ -405,22 +420,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#available-commands" class="md-nav__link">
-    Available Commands:
+  <a href="#defered-commands" class="md-nav__link">
+    Defered Commands
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#skipped-commands-not-for-s3" class="md-nav__link">
-    Skipped Commands (not for s3)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#skipped-interactive-commands" class="md-nav__link">
-    Skipped Interactive Commands
+  <a href="#unsopported-commands" class="md-nav__link">
+    Unsopported Commands
   </a>
   
 </li>
@@ -438,70 +446,258 @@
               
                 
                 
-                <h1 id="rclone-wrapper-status">Rclone Wrapper Status</h1>
+                <h1 id="rclone-commands-adoption-status">Rclone Commands Adoption Status</h1>
 <h2 id="supported-commands">Supported Commands</h2>
-<ul>
-<li>[x] cat             Concatenates any files and sends them to stdout.</li>
-<li>[x] copy            Copy files from source to dest, skipping already copied.</li>
-<li>[x] copyto          Copy files from source to dest, skipping already copied.</li>
-<li>[x] lsjson          List directories and objects in the path in JSON format.</li>
-<li>[x] tree            List the contents of the remote in a tree like fashion.</li>
-<li>[x] size            Prints the total size and number of objects in remote:path.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cat</code></td>
+<td>Concatenates any files and sends them to stdout.</td>
+</tr>
+<tr>
+<td><code>copy</code></td>
+<td>Copy files from source to dest, skipping already copied.</td>
+</tr>
+<tr>
+<td><code>copyto</code></td>
+<td>Copy files from source to dest, skipping already copied.</td>
+</tr>
+<tr>
+<td><code>lsjson</code></td>
+<td>List directories and objects in the path in JSON format.</td>
+</tr>
+<tr>
+<td><code>tree</code></td>
+<td>List the contents of the remote in a tree like fashion.</td>
+</tr>
+<tr>
+<td><code>size</code></td>
+<td>Prints the total size and number of objects in remote:path.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="next-commands">Next Commands</h2>
-<ul>
-<li>[ ] copyurl         Copy url content to dest.</li>
-</ul>
-<p>rcat            Copies standard input to file on remote.</p>
-<p>ls              List the objects in the path with size and path.
-lsd             List all directories/containers/buckets in the path.
-lsf             List directories and objects in remote:path formatted for parsing.
-lsl             List the objects in path with modification time, size and path.</p>
-<p>md5sum          Produces an md5sum file for all the objects in the path.
-sha1sum         Produces an sha1sum file for all the objects in the path.
-hashsum         Produces a hashsum file for all the objects in the path.</p>
-<p>mkdir           Make the path if it doesn't already exist.</p>
-<p>move            Move files from source to dest.
-moveto          Move file or directory from source to dest.
-purge           Remove the path and all of its contents.</p>
-<p>version         Show the version number.
-sync            Make source and dest identical, modifying destination only.</p>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>copyurl</code></td>
+<td>Copy url content to dest.</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>List the objects in the path with size and path.</td>
+</tr>
+<tr>
+<td><code>lsd</code></td>
+<td>List all directories/containers/buckets in the path.</td>
+</tr>
+<tr>
+<td><code>lsf</code></td>
+<td>List directories and objects in remote:path formatted for parsing.</td>
+</tr>
+<tr>
+<td><code>lsl</code></td>
+<td>List the objects in path with modification time, size and path.</td>
+</tr>
+<tr>
+<td><code>rcat</code></td>
+<td>Copies standard input to file on remote.</td>
+</tr>
+<tr>
+<td><code>md5sum</code></td>
+<td>Produces an md5sum file for all the objects in the path.</td>
+</tr>
+<tr>
+<td><code>sha1sum</code></td>
+<td>Produces an sha1sum file for all the objects in the path.</td>
+</tr>
+<tr>
+<td><code>hashsum</code></td>
+<td>Produces a hashsum file for all the objects in the path.</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>Make the path if it doesn't already exist.</td>
+</tr>
+<tr>
+<td><code>move</code></td>
+<td>Move files from source to dest.</td>
+</tr>
+<tr>
+<td><code>moveto</code></td>
+<td>Move file or directory from source to dest.</td>
+</tr>
+<tr>
+<td><code>purge</code></td>
+<td>Remove the path and all of its contents.</td>
+</tr>
+<tr>
+<td><code>version</code></td>
+<td>Show the version number.</td>
+</tr>
+<tr>
+<td><code>sync</code></td>
+<td>Make source and dest identical, modifying destination only.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="recheck">Recheck</h2>
-<p>genautocomplete Output completion script for a given shell.
-check           Checks the files in the source and destination match.
-cleanup         Clean up the remote if possible.
-config          Enter an interactive configuration session.
-gendocs         Output markdown docs for rclone to the directory supplied.
-listremotes     List all the remotes in the config file.</p>
-<h2 id="available-commands">Available Commands:</h2>
-<p>cryptcheck      Cryptcheck checks the integrity of a crypted remote.
-cryptdecode     Cryptdecode returns unencrypted file names.
-dedupe          Interactively find duplicate filenames and delete/rename them.
-delete          Remove the files in path.
-deletefile      Remove a single file from remote.
-help            Show help for rclone commands, flags and backends.
-link            Generate public link to file/folder.
-mount           Mount the remote as file system on a mountpoint.
-obscure         Obscure password for use in the rclone config file.
-rcd             Run rclone listening to remote control commands only.
-rmdir           Remove the empty directory at path.
-rmdirs          Remove empty directories under the path.
-settier         Changes storage class/tier of objects in remote.
-test            Run a test command
-touch           Create new file or change file modification time.</p>
-<h2 id="skipped-commands-not-for-s3">Skipped Commands (not for s3)</h2>
-<ul>
-<li>about           Get quota information from the remote.</li>
-<li>authorize       Remote authorization.</li>
-<li>backend         Run a backend specific command.</li>
-<li>selfupdate      Update the rclone binary.</li>
-<li>rc              Run a command against a running rclone.</li>
-<li>serve           Serve a remote over a protocol.</li>
-</ul>
-<h2 id="skipped-interactive-commands">Skipped Interactive Commands</h2>
-<ul>
-<li>ncdu            Explore a remote with a text based user interface.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>genautocomplete</code></td>
+<td>Output completion script for a given shell.</td>
+</tr>
+<tr>
+<td><code>check</code></td>
+<td>Checks the files in the source and destination match.</td>
+</tr>
+<tr>
+<td><code>cleanup</code></td>
+<td>Clean up the remote if possible.</td>
+</tr>
+<tr>
+<td><code>config</code></td>
+<td>Enter an interactive configuration session.</td>
+</tr>
+<tr>
+<td><code>gendocs</code></td>
+<td>Output markdown docs for rclone to the directory supplied.</td>
+</tr>
+<tr>
+<td><code>listremotes</code></td>
+<td>List all the remotes in the config file.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="defered-commands">Defered Commands</h2>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cryptcheck</code></td>
+<td>Cryptcheck checks the integrity of a crypted remote.</td>
+</tr>
+<tr>
+<td><code>cryptdecode</code></td>
+<td>Cryptdecode returns unencrypted file names.</td>
+</tr>
+<tr>
+<td><code>dedupe</code></td>
+<td>Interactively find duplicate filenames and delete/rename them.</td>
+</tr>
+<tr>
+<td><code>delete</code></td>
+<td>Remove the files in path.</td>
+</tr>
+<tr>
+<td><code>deletefile</code></td>
+<td>Remove a single file from remote.</td>
+</tr>
+<tr>
+<td><code>help</code></td>
+<td>Show help for rclone commands, flags and backends.</td>
+</tr>
+<tr>
+<td><code>link</code></td>
+<td>Generate public link to file/folder.</td>
+</tr>
+<tr>
+<td><code>mount</code></td>
+<td>Mount the remote as file system on a mountpoint.</td>
+</tr>
+<tr>
+<td><code>obscure</code></td>
+<td>Obscure password for use in the rclone config file.</td>
+</tr>
+<tr>
+<td><code>rcd</code></td>
+<td>Run rclone listening to remote control commands only.</td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td>Remove the empty directory at path.</td>
+</tr>
+<tr>
+<td><code>rmdirs</code></td>
+<td>Remove empty directories under the path.</td>
+</tr>
+<tr>
+<td><code>settier</code></td>
+<td>Changes storage class/tier of objects in remote.</td>
+</tr>
+<tr>
+<td><code>test</code></td>
+<td>Run a test command</td>
+</tr>
+<tr>
+<td><code>touch</code></td>
+<td>Create new file or change file modification time.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="unsopported-commands">Unsopported Commands</h2>
+<table>
+<thead>
+<tr>
+<th>cmd</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>about</code></td>
+<td>Get quota information from the remote.</td>
+</tr>
+<tr>
+<td><code>authorize</code></td>
+<td>Remote authorization.</td>
+</tr>
+<tr>
+<td><code>backend</code></td>
+<td>Run a backend specific command.</td>
+</tr>
+<tr>
+<td><code>selfupdate</code></td>
+<td>Update the rclone binary.</td>
+</tr>
+<tr>
+<td><code>rc</code></td>
+<td>Run a command against a running rclone.</td>
+</tr>
+<tr>
+<td><code>serve</code></td>
+<td>Serve a remote over a protocol.</td>
+</tr>
+<tr>
+<td><code>ncdu</code></td>
+<td>Explore a remote with a text based user interface.</td>
+</tr>
+</tbody>
+</table>
                 
               
               
