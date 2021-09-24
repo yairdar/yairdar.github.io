@@ -1,9 +1,0 @@
-items:
-
-  mkdocs:
-    configs:
-      - mkdocs.yml
-    consumers:
-      - taskapis/mkdocs.tasks.yml
-
-
