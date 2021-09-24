@@ -11,6 +11,10 @@ tasks:
       - echo "{{.GREETING}}"
     silent: true
 
+  git:pull:
+    desc: git pull
+    cmds: [git pull]
+
   git:publish-changes:
     desc: add, commit and push to origin
     args:
