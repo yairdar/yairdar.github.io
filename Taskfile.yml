@@ -1,0 +1,24 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - echo "{{.GREETING}}"
+    silent: true
+
+  git:publish-changes:
+    desc: add, commit and push to origin
+    args:
+      msg: msg prefix
+    vars:
+      tid: $(date -u +%Y-%m-%d--%H-%M-%S)
+    cmds:
+      - git add --all | true
+      - |-
+        git commit -am"{{.msg}} .@@tid={{.tid}}" \
+        && git push
