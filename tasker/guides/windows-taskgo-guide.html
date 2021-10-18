@@ -1,0 +1,885 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/logo-ico.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.2.3">
+    
+    
+      
+        <title>Task and Windows - Tasker Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#task-and-windows" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Tasker Docs" class="md-header__button md-logo" aria-label="Tasker Docs" data-md-component="logo">
+      
+  <img src="../assets/logo-ico.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tasker Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Task and Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/ydzvulon/tasker.git/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ydzvulon/tasker
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link">
+        Home
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../changelog.html" class="md-tabs__link">
+      Tasker Changelog
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="graphs-guild.html" class="md-tabs__link md-tabs__link--active">
+        Guides
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../tasker/mermaid.flowchart.html" class="md-tabs__link">
+        Tasker
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Tasker Docs" class="md-nav__button md-logo" aria-label="Tasker Docs" data-md-component="logo">
+      
+  <img src="../assets/logo-ico.ico" alt="logo">
+
+    </a>
+    Tasker Docs
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/ydzvulon/tasker.git/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ydzvulon/tasker
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
+      
+      <label class="md-nav__link" for="__nav_1">
+        Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Home" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        tasker
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog.html" class="md-nav__link">
+        Tasker Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="graphs-guild.html" class="md-nav__link">
+        Graph rendering
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="jupyter-guide.html" class="md-nav__link">
+        Jupyter Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="opensource.html" class="md-nav__link">
+        Opensource World
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="parsing-yaml.html" class="md-nav__link">
+        Parsing of Yaml
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="pydantic-guild.html" class="md-nav__link">
+        Pydantic Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="task-magic-guide-nix.html" class="md-nav__link">
+        Task Magic Guide Nix
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="task-magic-guide-windows.html" class="md-nav__link">
+        Task Magic Guide Windows
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Task and Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="windows-taskgo-guide.html" class="md-nav__link md-nav__link--active">
+        Task and Windows
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-development-base" class="md-nav__link">
+    Windows Development Base
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-development-cmder" class="md-nav__link">
+    Windows Development Cmder
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Development Cmder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmders-activation-in-any-cmd-window" class="md-nav__link">
+    Cmder's activation in any Cmd Window
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmders-integration-with-vscode" class="md-nav__link">
+    Cmder's integration with VsCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmders-integration-with-pycharm-or-idea" class="md-nav__link">
+    Cmder's integration with PyCharm or Idea
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasker-and-cmder" class="md-nav__link">
+    Tasker and Cmder
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasker and Cmder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasker-pitfalls" class="md-nav__link">
+    Tasker pitfalls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Tasker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tasker" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Tasker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tasker/mermaid.flowchart.html" class="md-nav__link">
+        Mermaid.flowchart
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows-development-base" class="md-nav__link">
+    Windows Development Base
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-development-cmder" class="md-nav__link">
+    Windows Development Cmder
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Development Cmder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cmders-activation-in-any-cmd-window" class="md-nav__link">
+    Cmder's activation in any Cmd Window
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmders-integration-with-vscode" class="md-nav__link">
+    Cmder's integration with VsCode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cmders-integration-with-pycharm-or-idea" class="md-nav__link">
+    Cmder's integration with PyCharm or Idea
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tasker-and-cmder" class="md-nav__link">
+    Tasker and Cmder
+  </a>
+  
+    <nav class="md-nav" aria-label="Tasker and Cmder">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tasker-pitfalls" class="md-nav__link">
+    Tasker pitfalls
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/ydzvulon/tasker.git/-/edit/master/docs/guides/windows-taskgo-guide.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="task-and-windows">Task and Windows<a class="headerlink" href="#task-and-windows" title="Permanent link">&para;</a></h1>
+<p>On Windows we assume WSL with linux and bash 
+so it's the same as linux in docker</p>
+<blockquote>
+<p>But it's not really on "windows"</p>
+</blockquote>
+<h2 id="windows-development-base">Windows Development Base<a class="headerlink" href="#windows-development-base" title="Permanent link">&para;</a></h2>
+<p>On Windows powershell is more in use then bash or cmd.
+However, we would like to keep most of <code>bash</code> code and
+state of mind.</p>
+<p>There are several builds of gnu tools for windows,
+the most famous is <code>cygwin</code> and <code>migwin</code>.</p>
+<p>We will need a Git For windows</p>
+<blockquote>
+<p><a href="https://git-scm.com/download/win">Download From git-scm.com Site</a></p>
+</blockquote>
+<p>Git Tools come with <code>bash</code>, <code>ls</code>, <code>tee</code> and of course <code>git</code> itself.</p>
+<p>Unfortunately it's not enough or comfortable work,
+we still miss <code>xargs</code> and good-looking terminal.</p>
+<h2 id="windows-development-cmder">Windows Development Cmder<a class="headerlink" href="#windows-development-cmder" title="Permanent link">&para;</a></h2>
+<p>For comfortable shell experience we need</p>
+<ul>
+<li>autocomplete</li>
+<li>search in history</li>
+<li>aliases</li>
+<li>tty</li>
+</ul>
+<p>Fortunately <a href="https://github.com/samvasko">Samuel Vasko</a> created
+a composition of con-emu, migwin and cmd dark magic.</p>
+<p>This bundle called <a href="https://cmder.net/">Cmder</a>
+and it provides very good shell experience.</p>
+<blockquote>
+<p>Sample view of console</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>C<span class="p">:</span><span class="nl">\Users\user\_wd\_public_\tasker</span><span class="c1"> (yairda.parse.sceleton -&gt; origin) </span>
+<span class="p">(</span>base<span class="p">)</span> λ ls
+_infra/    _out.log  LICENSE    tasker/       tasks/  tickets/
+_layout_/  docs/     README.md  Taskfile.yml  tests/  version/
+
+C<span class="p">:</span><span class="nl">\Users\user\_wd\_public_\tasker</span><span class="c1"> (yairda.parse.sceleton -&gt; origin) </span>
+<span class="p">(</span>base<span class="p">)</span> λ ls <span class="p">|</span> xargs -n1 echo
+_infra/
+_layout_/
+_out.log
+
+C<span class="p">:</span><span class="nl">\Users\user\_wd\_public_\tasker</span><span class="c1"> (yairda.parse.sceleton -&gt; origin) </span>
+<span class="p">(</span>base<span class="p">)</span> λ 
+</code></pre></div>
+<h3 id="cmders-activation-in-any-cmd-window">Cmder's activation in any Cmd Window<a class="headerlink" href="#cmders-activation-in-any-cmd-window" title="Permanent link">&para;</a></h3>
+<p>There are ways to deeply integrate cmder into VsCode or Pycharm.
+Let's start from direct change of cmd to nice shell.</p>
+<p>Consider your username is <code>user</code> and you upacked cmder to 
+<code>C:\\Users\\user\\Apps\\cmder</code> folder.</p>
+<blockquote>
+<p>For cmder activation run 
+<code>cmd /k C:\\Users\\user\\Apps\\cmder\\vendor\\bin\\vscode_init.cmd</code></p>
+</blockquote>
+<h3 id="cmders-integration-with-vscode">Cmder's integration with VsCode<a class="headerlink" href="#cmders-integration-with-vscode" title="Permanent link">&para;</a></h3>
+<p>Can I use Cmder's shell with the terminal on Windows?</p>
+<blockquote>
+<p>Yes, to use the Cmder shell in VS Code, you need to add the following settings to your settings.json file:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;terminal.integrated.profiles.windows&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;cmder&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;C:\\WINDOWS\\System32\\cmd.exe&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;args&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;/K&quot;</span><span class="p">,</span> <span class="s2">&quot;C:\\cmder\\vendor\\bin\\vscode_init.cmd&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;terminal.integrated.defaultProfile.windows&quot;</span><span class="p">:</span> <span class="s2">&quot;cmder&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<blockquote>
+<p>More on integration with vscode</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/cmderdev/cmder/wiki/Seamless-VS-Code-Integration">cmder wiki on vscode</a></li>
+<li><a href="https://dev.to/andrewriveradev/how-to-setup-cmder-in-vscode-in-2021-3nkc">cmder vscode 2021</a></li>
+<li><a href="https://code.visualstudio.com/docs/editor/integrated-terminal#_can-i-use-cmders-shell-with-the-terminal-on-windows">use-cmders-shell-with-the-terminal-on-windows</a></li>
+</ul>
+<h3 id="cmders-integration-with-pycharm-or-idea">Cmder's integration with PyCharm or Idea<a class="headerlink" href="#cmders-integration-with-pycharm-or-idea" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>!!! TODO: Please add simple instruction !!!</p>
+<p>More on integration with pycharm</p>
+</blockquote>
+<ul>
+<li><a href="https://www.jetbrains.com/help/pycharm/terminal-emulator.html#configure-the-terminal-emulator">https://www.jetbrains.com/help/pycharm/terminal-emulator.html#configure-the-terminal-emulator</a></li>
+<li><a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/206334729-use-cmder-or-conemu-in-Terminal-without-opening-new-window">https://intellij-support.jetbrains.com/hc/en-us/community/posts/206334729-use-cmder-or-conemu-in-Terminal-without-opening-new-window</a></li>
+<li><a href="https://stackoverflow.com/questions/66373669/cmder-terminal-integration-into-intellij-webstorm-goland-with-aliases">https://stackoverflow.com/questions/66373669/cmder-terminal-integration-into-intellij-webstorm-goland-with-aliases</a></li>
+<li><a href="https://stackoverflow.com/questions/49615928/how-get-cmder-running-behind-python-debugger-in-intellij-or-pycharm">https://stackoverflow.com/questions/49615928/how-get-cmder-running-behind-python-debugger-in-intellij-or-pycharm</a></li>
+</ul>
+<h2 id="tasker-and-cmder">Tasker and Cmder<a class="headerlink" href="#tasker-and-cmder" title="Permanent link">&para;</a></h2>
+<p>Taskgo has number of tricks to make things easy between posix and windows.</p>
+<p>Please see <a href="https://taskfile.dev/#/usage?id=gos-template-engine">https://taskfile.dev/#/usage?id=gos-template-engine</a></p>
+<ul>
+<li><code>OS</code>: <strong>os name</strong><ul>
+<li><code>echo '{{if eq OS "windows"}}windows-command{{else}}unix-command{{end}}'</code></li>
+</ul>
+</li>
+<li><code>fromSlash</code>: Opposite of toSlash. Does nothing on Unix, but on <strong>Windows</strong> converts a string from / path format to \.<ul>
+<li><code>echo '{{fromSlash "path/to/file"}}'</code></li>
+</ul>
+</li>
+<li><code>exeExt</code>: Returns the right executable extension for the current OS (".exe" for Windows, "" for others).</li>
+</ul>
+<h3 id="tasker-pitfalls">Tasker pitfalls<a class="headerlink" href="#tasker-pitfalls" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>color output</p>
+</blockquote>
+<p>when working in cmder taskgo will output colors to console.
+to disable it use <code>set NO_COLOR=1</code></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="task-magic-guide-windows.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Task Magic Guide Windows" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Task Magic Guide Windows
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../tasker/mermaid.flowchart.html" class="md-footer__link md-footer__link--next" aria-label="Next: Mermaid.flowchart" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Mermaid.flowchart
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.29db7785.min.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>

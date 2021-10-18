@@ -1,0 +1,5 @@
+fire
+loguru
+pyyaml
+pydantic
+fastapi
