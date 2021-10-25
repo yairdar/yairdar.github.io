@@ -14,7 +14,7 @@
     
     
       
-        <title>Python Compilation / Packing - Servises Docs</title>
+        <title>Taskgo guide - Servises Docs</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-compilation-packing" class="md-skip">
+        <a href="#taskgo-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Compilation / Packing
+              Taskgo guide
             
           </span>
         </div>
@@ -381,72 +381,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Python Compilation / Packing
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="python-compile.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="python-compile.html" class="md-nav__link">
         Python Compilation / Packing
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#compilers-overview" class="md-nav__link">
-    Compilers Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nuitka" class="md-nav__link">
-    Nuitka
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cython" class="md-nav__link">
-    Cython
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pyinstaller" class="md-nav__link">
-    PyInstaller
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -466,11 +405,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="taskgo-guide.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="taskgo-guide.html" class="md-nav__link md-nav__link--active">
         Taskgo guide
       </a>
+      
     </li>
   
 
@@ -536,42 +485,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#compilers-overview" class="md-nav__link">
-    Compilers Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nuitka" class="md-nav__link">
-    Nuitka
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cython" class="md-nav__link">
-    Cython
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pyinstaller" class="md-nav__link">
-    PyInstaller
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -582,38 +495,15 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="/-/edit/master/docs/guides/python-compile.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="/-/edit/master/docs/guides/taskgo-guide.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="python-compilation-packing">Python Compilation / Packing<a class="headerlink" href="#python-compilation-packing" title="Permanent link">&para;</a></h1>
-<p>We apprcieate simple drop-in no-deps executables,
-which are genereated by go compiler.</p>
-<p>But some of us still don't know go,
-and more important there are a lot of software written in python.</p>
-<p>So we are looking for ways to pack/compile python program to
-single drop-in exe (or at least exe ad resource dir)</p>
-<h2 id="compilers-overview">Compilers Overview<a class="headerlink" href="#compilers-overview" title="Permanent link">&para;</a></h2>
+                <h1 id="taskgo-guide">Taskgo guide<a class="headerlink" href="#taskgo-guide" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Nuitka</li>
-<li>PyInstaller</li>
-<li>mypyc</li>
-<li>cython</li>
-</ul>
-<h2 id="nuitka">Nuitka<a class="headerlink" href="#nuitka" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://stackoverflow.com/questions/49831163/compile-python-3-6-script-to-standalone-exe-with-nuitka-on-windows-10">Nuitka Compile to exe on win</a></li>
-<li><a href="https://github.com/Nuitka/NUITKA-Utilities/issues/62">https://github.com/Nuitka/NUITKA-Utilities/issues/62</a></li>
-<li><a href="https://github.com/Nuitka/NUITKA-Utilities/tree/master/hinted-compilation">https://github.com/Nuitka/NUITKA-Utilities/tree/master/hinted-compilation</a></li>
-</ul>
-<h2 id="cython">Cython<a class="headerlink" href="#cython" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://tryexceptpass.org/article/package-python-as-executable/">4 Attempts at Packaging Python as an Executable</a></li>
-</ul>
-<h2 id="pyinstaller">PyInstaller<a class="headerlink" href="#pyinstaller" title="Permanent link">&para;</a></h2>
-<ul>
-<li><a href="https://github.com/pyinstaller/pyinstaller/blob/develop/PyInstaller/hooks/hook-pandas.py">https://github.com/pyinstaller/pyinstaller/blob/develop/PyInstaller/hooks/hook-pandas.py</a></li>
+<li><a href="https://conemu.github.io/en/wsl.html#start">https://conemu.github.io/en/wsl.html#start</a></li>
+<li><a href="https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92">https://dev.to/stack-labs/introduction-to-taskfile-a-makefile-alternative-h92</a></li>
 </ul>
                 
               
@@ -634,7 +524,7 @@ single drop-in exe (or at least exe ad resource dir)</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="python-blogs.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Python Blogs and REsources" rel="prev">
+        <a href="shell-guide.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Shell Guide" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -643,20 +533,20 @@ single drop-in exe (or at least exe ad resource dir)</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Python Blogs and REsources
+              Shell Guide
             </div>
           </div>
         </a>
       
       
         
-        <a href="shell-guide.html" class="md-footer__link md-footer__link--next" aria-label="Next: Shell Guide" rel="next">
+        <a href="vault-guide.html" class="md-footer__link md-footer__link--next" aria-label="Next: Vault Guide" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Shell Guide
+              Vault Guide
             </div>
           </div>
           <div class="md-footer__button md-icon">
