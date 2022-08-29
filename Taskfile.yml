@@ -11,18 +11,3 @@ tasks:
       - task -l
     silent: true
 
-  git:pull:
-    desc: git pull
-    cmds: [git pull]
-
-  git:publish-changes:
-    desc: add, commit and push to origin
-    args:
-      msg: msg prefix
-    vars:
-      tid: $(date -u +%Y-%m-%d--%H-%M-%S)
-    cmds:
-      - git add --all | true
-      - |-
-        git commit -am"{{.msg}} .@@tid={{.tid}}" \
-        && git push
