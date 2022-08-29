@@ -1,0 +1,1056 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/logo-ico.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.2.3">
+    
+    
+      
+        <title>Environment Variables - Yiardar Opensource</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#environment-variables" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="Yiardar Opensource" class="md-header__button md-logo" aria-label="Yiardar Opensource" data-md-component="logo">
+      
+  <img src="../../../assets/logo-ico.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yiardar Opensource
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Environment Variables
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    reporepo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../index.html" class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../index.html" class="md-tabs__link md-tabs__link--active">
+        Base tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../contribution/index.html" class="md-tabs__link">
+      Contribution
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../guides/aws-guide.html" class="md-tabs__link">
+        Guides
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Yiardar Opensource" class="md-nav__button md-logo" aria-label="Yiardar Opensource" data-md-component="logo">
+      
+  <img src="../../../assets/logo-ico.ico" alt="logo">
+
+    </a>
+    Yiardar Opensource
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    reporepo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        Base tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Base tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Base tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        A tasker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="A tasker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          A tasker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Intro Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c01_getting_started/index.html" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c02_task_directory/index.html" class="md-nav__link">
+        Task Directory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c03_including_taskfiles/index.html" class="md-nav__link">
+        Including Taskfiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c04_vars/index.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Environment Variables
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="index.html" class="md-nav__link md-nav__link--active">
+        Environment Variables
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-environment-variables" class="md-nav__link">
+    Intro to Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-environment-variables" class="md-nav__link">
+    Global Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables-priority" class="md-nav__link">
+    Environment Variables Priority
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passing-environment-variables-in-command-line" class="md-nav__link">
+    Passing Environment Variables in Command Line
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-existing-environment-variables-in-tasks" class="md-nav__link">
+    Using Existing Environment Variables in Tasks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-variables-get-evaluated-to-environment-variables" class="md-nav__link">
+    When Variables Get Evaluated to Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#name-collisions-between-variables-and-environment-variables" class="md-nav__link">
+    Name Collisions Between Variables and Environment Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#next-chapter" class="md-nav__link">
+    Next chapter
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c06_deps/index.html" class="md-nav__link">
+        Dependencies - Run Tasks in Parallel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c07_cli_args/index.html" class="md-nav__link">
+        Passing CLI Arguments to the Task
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../c08_requests/index.html" class="md-nav__link">
+        Requests - an Applied Tasker Example
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" data-md-state="indeterminate" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        B devpod
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="B devpod" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          B devpod
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b-devpod/index.html" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../b-devpod/devpod-get-env-ready.html" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contribution/index.html" class="md-nav__link">
+        Contribution
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/aws-guide.html" class="md-nav__link">
+        Aws Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/base-tools-intro.html" class="md-nav__link">
+        Essential Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/bash-tests.html" class="md-nav__link">
+        yairdar.github.io.publisher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/dev-in-container.html" class="md-nav__link">
+        Developing in container
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/gitpod-guide.html" class="md-nav__link">
+        gitpod
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/jq-guide.html" class="md-nav__link">
+        JQ guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/keycloak-sample.html" class="md-nav__link">
+        Key Cloack Examples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/local-factory.html" class="md-nav__link">
+        k8s k3s minio argocd argowf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/minio-guilde.html" class="md-nav__link">
+        Minio Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/mkdocs-guide.html" class="md-nav__link">
+        Mkdocs Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/python-blogs.html" class="md-nav__link">
+        Python Blogs and REsources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/python-compile.html" class="md-nav__link">
+        Python Compilation / Packing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/shell-guide.html" class="md-nav__link">
+        Shell Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/taskgo-guide.html" class="md-nav__link">
+        Taskgo guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/vault-guide.html" class="md-nav__link">
+        Vault Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/vscode-extentions.html" class="md-nav__link">
+        VSCode Extentions Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../guides/yaml-guide.html" class="md-nav__link">
+        Yaml Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="/-/edit/master/docs/base-tutorials/a-tasker/c05_env_vars/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h1>
+<p><em><a href="https://taskfile.dev/usage/#environment-variables">Environment Variables</a> 
+in official documentation</em></p>
+<h2 id="intro-to-environment-variables">Intro to Environment Variables<a class="headerlink" href="#intro-to-environment-variables" title="Permanent link">&para;</a></h2>
+<p><a href="Taskfile.yml">Here is the Taskfile</a> to follow along.</p>
+<blockquote>
+<p>Open the working directory in terminal (I suggest you to use <code>./working_dir</code>)</p>
+</blockquote>
+<p>Tasks can make use of envronmental variables. Let's explore this feature.</p>
+<p>Create a new taskfile (<code>task --init</code>), open it in a text editor and add a new<br />
+task to it:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">greet-env</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">here we declare an enviroment variable right here in task</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo ${GREETING}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">GREETING</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hello, dear user! Here is the environment variable</span><span class="w"></span>
+</code></pre></div>
+<p>Here we dectale the environment variable in <code>env</code> block and call it<br />
+like this: <code>${GREETING}</code></p>
+<p>Try to run this task: <code>task greet-env</code></p>
+<h2 id="global-environment-variables">Global Environment Variables<a class="headerlink" href="#global-environment-variables" title="Permanent link">&para;</a></h2>
+<p>This is how we declare environment variables in tasks. We can declare them on<br />
+the taskfile level as well. Let's do it. Add an <code>env</code> block after the <code>vars</code><br />
+block in the beginning of the file:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span><span class="w"></span>
+
+<span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">GREETING</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Here we explore using enviroment variables in tasks</span><span class="w"></span>
+
+<span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">GLOBAL_GREET_ENV</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This env var is accessible for all tasks</span><span class="w"></span>
+</code></pre></div>
+<p>Add a task that will use this variable:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">greet-global-env</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">here we use an enviroment variable declared globally in the taskfile</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo ${GLOBAL_GREET_ENV}</span><span class="w"></span>
+</code></pre></div>
+<p>Try it: <code>task greet-global-env</code></p>
+<h2 id="environment-variables-priority">Environment Variables Priority<a class="headerlink" href="#environment-variables-priority" title="Permanent link">&para;</a></h2>
+<p>Local enviroment variables override the global ones. Add this task to the<br />
+taskfile:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">greet-global-env-override</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">here we override an enviroment variable declared globally above</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo ${GLOBAL_GREET_ENV}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">     </span><span class="nt">GLOBAL_GREET_ENV</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A local env var overrides the global one</span><span class="w"></span>
+</code></pre></div>
+<p>Run it: <code>task greet-global-env-override</code>.</p>
+<h2 id="passing-environment-variables-in-command-line">Passing Environment Variables in Command Line<a class="headerlink" href="#passing-environment-variables-in-command-line" title="Permanent link">&para;</a></h2>
+<p>Now let's try to pass an enviroment variable in the command line while calling<br />
+the task:</p>
+<p><code>GREETING="Hi from command line" task greet-env</code></p>
+<p>And with the global variable it will work as well (sure enough):</p>
+<p><code>GLOBAL_GREET_ENV="And this one is from command line" task greet-global-env</code></p>
+<p>And even with both of them:</p>
+<p><code>GLOBAL_GREET_ENV="From command line as well" task greet-global-env-override</code></p>
+<p>That's expected: the enviroment variable that comes from the <em>enviroment</em><br />
+is more important than the one defined in the taskfile.</p>
+<h2 id="using-existing-environment-variables-in-tasks">Using Existing Environment Variables in Tasks<a class="headerlink" href="#using-existing-environment-variables-in-tasks" title="Permanent link">&para;</a></h2>
+<p>Let's use an enviroment variable that we definitely have. Add a task to<br />
+the taskfile:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">shell-name</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">In this task we use existing enviroment variable</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo ${SHELL}</span><span class="w"></span>
+</code></pre></div>
+<p>Run it (<code>task shell-name</code>), and it will print out the shell path.</p>
+<h2 id="when-variables-get-evaluated-to-environment-variables">When Variables Get Evaluated to Environment Variables<a class="headerlink" href="#when-variables-get-evaluated-to-environment-variables" title="Permanent link">&para;</a></h2>
+<p>If task uses a variable with the same name that an enviroment variable has,<br />
+and no variables with this name were declared in taskfile or task itself,<br />
+this variable gets evaluated to the value of the enviroment variable with<br />
+the same name.</p>
+<p>For example let's add a task:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">shell-name-as-var</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This task will evaluate a var to the env var from system</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo {{.SHELL}}</span><span class="w"></span>
+</code></pre></div>
+<p>Note that <code>{{.SHELL}}</code> is written like an ordinary variable, not like this:<br />
+<code>${SHELL}</code>. But the result in this case will be the same!</p>
+<p>Anyway to avoid confusion I <strong>recommend</strong> to use <code>${ENV_VAR}</code> syntax for<br />
+enviroment variables and <code>{{.VAR}}</code> for other variables.</p>
+<p>Look what will happen if we'll declare a variable <code>{{.SHELL}}</code> in this task:  </p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">shell-var</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">This task won&#39;t evaluate a var to the env var from system</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo {{.SHELL}}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">vars</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">SHELL</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">var overrides an env var if called as a var</span><span class="w"></span>
+</code></pre></div>
+<p>In this case it behaves like an ordinary variable.</p>
+<h2 id="name-collisions-between-variables-and-environment-variables">Name Collisions Between Variables and Environment Variables<a class="headerlink" href="#name-collisions-between-variables-and-environment-variables" title="Permanent link">&para;</a></h2>
+<p>Let's add a task that uses a local enviroment variable and a global variable<br />
+with the same name (it will work with a local variable as well):</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">greet-env-and-var</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">global and enviroment variable do not fight, but avoid name collisions</span><span class="w"></span>
+<span class="w">    </span><span class="nt">cmds</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;{{.GREETING}}&quot;</span><span class="w"></span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo ${GREETING}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">env</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="nt">GREETING</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The environment variable doesn&#39;t override the global variable</span><span class="w"></span>
+</code></pre></div>
+<p>Run it (<code>task greet-env-and-var</code>), and you'll see both values printed out.</p>
+<p>They won't override each other, but nontheless it's <strong>not recommended</strong><br />
+to collide variable names like this. If you can avoid confusion, do.</p>
+<p>This was a long chapter with many sections and edge cases, because its subject<br />
+is pretty complicated. The next chapter will be much easier!</p>
+<h2 id="next-chapter"><a href="../c06_deps/index.html">Next chapter</a><a class="headerlink" href="#next-chapter" title="Permanent link">&para;</a></h2>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../c04_vars/index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Variables" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Variables
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../c06_deps/index.html" class="md-footer__link md-footer__link--next" aria-label="Next: Dependencies - Run Tasks in Parallel" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Dependencies - Run Tasks in Parallel
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.expand", "navigation.instant", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.29db7785.min.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
