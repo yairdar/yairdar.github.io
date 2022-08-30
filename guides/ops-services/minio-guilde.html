@@ -1,0 +1,1329 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/logo-ico.ico">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.2.3">
+    
+    
+      
+        <title>Minio Guide - Yiardar Opensource</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#minio-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../index.html" title="Yiardar Opensource" class="md-header__button md-logo" aria-label="Yiardar Opensource" data-md-component="logo">
+      
+  <img src="../../assets/logo-ico.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yiardar Opensource
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Minio Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    reporepo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../index.html" class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../base-tutorials/a-tasker/index.html" class="md-tabs__link">
+        Base tutorials
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../contribution/index.html" class="md-tabs__link">
+      Contribution
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../dev-services/github-guide.html" class="md-tabs__link md-tabs__link--active">
+        Guides
+      </a>
+    </li>
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../index.html" title="Yiardar Opensource" class="md-nav__button md-logo" aria-label="Yiardar Opensource" data-md-component="logo">
+      
+  <img src="../../assets/logo-ico.ico" alt="logo">
+
+    </a>
+    Yiardar Opensource
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    reporepo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Base tutorials
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Base tutorials" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Base tutorials
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        A tasker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="A tasker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          A tasker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/index.html" class="md-nav__link">
+        Intro Tutorial
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c01_getting_started/index.html" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c02_task_directory/index.html" class="md-nav__link">
+        Task Directory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c03_including_taskfiles/index.html" class="md-nav__link">
+        Including Taskfiles
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c04_vars/index.html" class="md-nav__link">
+        Variables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c05_env_vars/index.html" class="md-nav__link">
+        Environment Variables
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c06_deps/index.html" class="md-nav__link">
+        Dependencies - Run Tasks in Parallel
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c07_cli_args/index.html" class="md-nav__link">
+        Passing CLI Arguments to the Task
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/a-tasker/c08_requests/index.html" class="md-nav__link">
+        Requests - an Applied Tasker Example
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        B devpod
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="B devpod" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          B devpod
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/b-devpod/index.html" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../base-tutorials/b-devpod/devpod-get-env-ready.html" class="md-nav__link">
+        Get Started
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribution/index.html" class="md-nav__link">
+        Contribution
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Guides
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Guides" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_1" type="checkbox" id="__nav_4_1" >
+      
+      <label class="md-nav__link" for="__nav_4_1">
+        Dev services
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dev services" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Dev services
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-services/github-guide.html" class="md-nav__link">
+        Github guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-services/gitpod-guide.html" class="md-nav__link">
+        gitpod
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Dev tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dev tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dev tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-tools/dev-in-container.html" class="md-nav__link">
+        Developing in container
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-tools/vscode-extentions.html" class="md-nav__link">
+        VSCode Extentions Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Lang python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Lang python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Lang python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang-python/python-blogs.html" class="md-nav__link">
+        Python Blogs and REsources
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lang-python/python-compile.html" class="md-nav__link">
+        Python Compilation / Packing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" >
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Ops cloud
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ops cloud" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ops cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-cloud/aws-guide.html" class="md-nav__link">
+        Aws Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-cloud/k3s-guide.html" class="md-nav__link">
+        K3s guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" checked>
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        Ops services
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ops services" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Ops services
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="keycloak-sample.html" class="md-nav__link">
+        Key Cloack Examples
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="local-factory.html" class="md-nav__link">
+        k8s k3s minio argocd argowf
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Minio Guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="minio-guilde.html" class="md-nav__link md-nav__link--active">
+        Minio Guide
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rclone-vs-minio" class="md-nav__link">
+    Rclone vs Minio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#awesome-minio" class="md-nav__link">
+    Awesome Minio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guidelines" class="md-nav__link">
+    Contribution Guidelines
+  </a>
+  
+    <nav class="md-nav" aria-label="Contribution Guidelines">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloud-paas" class="md-nav__link">
+    Cloud - PaaS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-iaas" class="md-nav__link">
+    Cloud - IaaS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#devops-cicd" class="md-nav__link">
+    DevOps - CI/CD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloudsaas-applications" class="md-nav__link">
+    Cloud/SaaS Applications
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-management-system" class="md-nav__link">
+    Content Management System
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-development-services" class="md-nav__link">
+    Application Development Services
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-backup-versioning" class="md-nav__link">
+    Cloud Backup / Versioning
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cloud-storage-clients" class="md-nav__link">
+    Cloud Storage Clients
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-application-framework" class="md-nav__link">
+    Web Application Framework
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#minio-as-managed-service" class="md-nav__link">
+    Minio as Managed Service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compatible-hardware" class="md-nav__link">
+    Compatible Hardware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-sharing" class="md-nav__link">
+    File Sharing
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vault-guide.html" class="md-nav__link">
+        Vault Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Ops tools
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ops tools" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Ops tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/base-tools-intro.html" class="md-nav__link">
+        Essential Tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/bash-tests.html" class="md-nav__link">
+        yairdar.github.io.publisher
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/jq-guide.html" class="md-nav__link">
+        JQ guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/mkdocs-guide.html" class="md-nav__link">
+        Mkdocs Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/shell-guide.html" class="md-nav__link">
+        Shell Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/taskgo-guide.html" class="md-nav__link">
+        Taskgo guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/yaml-guide.html" class="md-nav__link">
+        Yaml Guide
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ops-tools/date-time/cron-guide.html" class="md-nav__link">
+        Cron Guide
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="/-/edit/master/docs/guides/ops-services/minio-guilde.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <h1 id="minio-guide">Minio Guide<a class="headerlink" href="#minio-guide" title="Permanent link">&para;</a></h1>
+<h2 id="rclone-vs-minio">Rclone vs Minio<a class="headerlink" href="#rclone-vs-minio" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.libhunt.com/compare-minio-vs-rclone?ref=compare">https://www.libhunt.com/compare-minio-vs-rclone?ref=compare</a></li>
+<li><a href="https://forum.rclone.org/t/recommendations-for-using-rclone-with-a-minio-10m-files/14472">https://forum.rclone.org/t/recommendations-for-using-rclone-with-a-minio-10m-files/14472</a></li>
+<li><a href="https://golangrepo.com/tag/terraform-provider-minio_star_1">https://golangrepo.com/tag/terraform-provider-minio_star_1</a></li>
+<li><a href="https://www.huuphan.com/2021/08/rclone-backup-all-vps-to-microsoft.html">https://www.huuphan.com/2021/08/rclone-backup-all-vps-to-microsoft.html</a></li>
+<li><a href="https://awstools.dev/">https://awstools.dev/</a></li>
+<li><a href="https://opensourcelibs.com/libs/s3">https://opensourcelibs.com/libs/s3</a></li>
+<li><a href="https://strobelstefan.org/2021/03/02/rclone-dateien-von-git-repository-automatisch-zu-nexcloud-uebertragen/">https://strobelstefan.org/2021/03/02/rclone-dateien-von-git-repository-automatisch-zu-nexcloud-uebertragen/</a></li>
+</ul>
+<h2 id="awesome-minio">Awesome Minio <a href="https://travis-ci.org/minio/awesome-minio"><img alt="Build Status" src="https://api.travis-ci.org/minio/awesome-minio.svg?branch=master" /></a> <a href="https://github.com/sindresorhus/awesome"><img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" /></a> <a href="https://slack.minio.io"><img alt="Slack" src="https://slack.minio.io/slack?type=svg" /></a><a class="headerlink" href="#awesome-minio" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>from <a href="https://github.com/minio/awesome-minio">https://github.com/minio/awesome-minio</a></p>
+</blockquote>
+<p>A curated list of Minio community projects inspired by awesome-go.</p>
+<blockquote>
+<p>content </p>
+</blockquote>
+<p>A curated list of Minio community projects inspired by <a href="https://github.com/avelino/awesome-go">awesome-go</a>.</p>
+<h2 id="contribution-guidelines">Contribution Guidelines<a class="headerlink" href="#contribution-guidelines" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Add entries alphabetically, under the appropriate category.</li>
+<li>To add, remove, or change things on the list: Submit a pull request.</li>
+<li>Description should contain a link with the name of the package/project/website.</li>
+<li>Do not exceed more than a paragraph.</li>
+</ul>
+<h3 id="cloud-paas">Cloud - PaaS<a class="headerlink" href="#cloud-paas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://cloudron.io">Cloudron</a> - Cloudron is a platform that makes it easy to run web apps on your server and keep them up-to-date. Cloudron supports storing it's backups on Minio, you can read more <a href="https://cloudron.io/documentation/backups/#minio">here</a>. Minio itself has been packaged as a Cloudron App - you can try it in the <a href="https://my.demo.cloudron.io">demo</a> (username: cloudron password: cloudron) <a href="https://cloudron.io/store/io.minio.cloudronapp.html">Minio on Cloudron App Store</a> - <a href="https://git.cloudron.io/cloudron/minio-app">Package Source</a>.</li>
+<li><a href="https://web.teamhephy.com/">Hephy Workflow</a> (formerly known as Deis Workflow) - an open source Platform-as-a-Service for <a href="https://kubernetes.io/">Kubernetes</a>. Workflow uses Minio by default to store all internal application metadata and database backups.</li>
+<li><a href="https://jelastic.com/">Jelastic</a> - Jelastic is a multi-cloud PaaS and CaaS for business. It uses Minio as an S3 compatible object storage server in Docker containers.</li>
+<li><a href="https://github.com/shinji62/minio-dist-boshrelease">minio-dist-boshrelease</a> - Cloud Foundry <a href="https://bosh.io">BOSH</a> is an open source tool chain for release engineering, deployment and lifecycle management of large scale distributed services. minio-dist-boshrelease will help easily install the <a href="https://docs.minio.io/docs/distributed-minio-quickstart-guide.html">distributed version of Minio</a>.</li>
+<li><a href="https://github.com/slypix/minio-dokku">minio-dokku</a> - Dockerfile to run Minio on <a href="http://dokku.viewdocs.io/dokku/">Dokku</a> PaaS.</li>
+<li><a href="https://github.com/kyma-project/rafter/">Rafter</a> - Kubernetes-native files/assets store powered by MinIO. It extends Kubernetes with Custom Resource Definitions like AssetGroup, Asset and Bucket. It supports webhook approach that you can modify/validate/analyze a file asynchronously before it is being saved into MinIO.</li>
+<li><a href="https://sloppy.io/">sloppy.io</a> - sloppy.io is the fastest way to deploy your docker container online. We provide the infrastructure and workflow to run container applications and micro services. Access our platform over the web, via CLI or our own API. Check out <a href="https://sloppy.io/deploying-minio-to-sloppy-io/">Deploying Minio to sloppy.io</a> for further info!</li>
+<li><a href="https://www.univention.com/">Univention Corporate Server</a> - Univention Corporate Server (UCS) is the innovative basis for the cost-efficient operation and easy administration of server applications and entire IT infrastructures. The integrated App Center offers a multitude of enterprise solutions, which can be run or operated virtually with just a few clicks. Minio has been packages as an app for Univention - you can try it from the <a href="https://www.univention.com/products/univention-app-center/app-catalog/minio/">Univention App Center</a> - <a href="https://stash.z-hub.io/projects/K4U/repos/minio/browse">Source</a>.</li>
+</ul>
+<h3 id="cloud-iaas">Cloud - IaaS<a class="headerlink" href="#cloud-iaas" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.digitalocean.com">Digital Ocean</a> - Deploy an SSD cloud server in 55 seconds.</li>
+<li><a href="http://www.dxc.technology/cloud/offerings/140041/140149-eucalyptus_software_support_services">Eucalyptus</a> - Eucalyptus is an open solution to build private and hybrid clouds that are compatible with Amazon Web Services. Minio can be <a href="https://mdshaonimran.wordpress.com/category/cloud-computing/eucalyptus/">used</a> as an object storage backend for Eucalyptus.</li>
+<li><a href="https://github.com/bryanl/ha-minio">Ha-Minio</a> - Configures Minio, as a S3 compatible cloud storage server for DigitalOcean in a highly available fashion.</li>
+<li><a href="http://www.onlinetech.com">Onlinetech</a> - Secure, compliant enterprise cloud.</li>
+<li><a href="https://www.ovh.com/us/">OVH</a> - Build your own infrastructure with OVH public cloud..</li>
+<li><a href="https://www.packet.net">Packet</a> - Packet is a baremetal cloud provider.</li>
+<li><a href="http://plumbery.readthedocs.io/en/latest/tutorial.minio.html">Plumbery</a> -  Plumbery is an open source project that was initiated by Dimension Data to accelerate digital transformation. It recommends using Minio as a standalone object storage.</li>
+<li><a href="https://github.com/blockai/s3-tus-store">s3-tus-store</a> - Minio is the supported storage backend for <a href="https://tus.io/">https://tus.io/</a>. Tus is an open protocol for resumable file uploads.</li>
+<li><a href="https://www.scaleway.com">ScaleWay</a> - Scalable and affordable cloud and bare-metal servers (European DC).</li>
+<li><a href="https://www.ssdnodes.com/">SSD Nodes</a> - Simple, high performance cloud provider with truly personalized support.</li>
+</ul>
+<h3 id="devops-cicd">DevOps - CI/CD<a class="headerlink" href="#devops-cicd" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/drone/drone">drone.io</a> - drone.io is continuous integration for Github and Bitbucket, that monitors your code for bugs. It uses Minio as an AWS S3 cloud storage alternative.</li>
+<li><a href="https://www.dragonfly.co.nz/">Gorbachev IO</a> - Gorbachev is a continuous integration platform, used to manage reproducible research at Dragonfly Data Science. Minio tools are awesome, and the community is supportive and responsive.</li>
+<li><a href="https://github.com/tarantool/mkrepo">mkrepo</a> - maintains an RPM or DEB repository in S3, and periodically regenerates metadata. You can use Minio as a convenient and inexpensive storage for your CI.</li>
+<li><a href="https://github.com/18F/s3-resource-simple">s3-resource-simple</a> - s3-resource-simple is <a href="https://concourse-ci.org/">Concourse CI's</a> resource for uploading files to S3. It supports Minio as an object storage backend.</li>
+<li><a href="https://github.com/kogitoapp/puppet-minio">puppet-minio</a> - Puppet module to manage Minio installations. Uses the binary, does not (yet) support Docker based installation. (Requires Puppet version 4+)</li>
+</ul>
+<h3 id="cloudsaas-applications">Cloud/SaaS Applications<a class="headerlink" href="#cloudsaas-applications" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.appknox.com/">Appknox</a> - Appknox detects &amp; addresses vulnerabilities in mobile apps within minutes. Managing storage was a nightmare for us before Minio came along. We use Minio to store all our ipa/apk files and pdf reports that gets auto-nenerated. We are an enterprise startup and we offer on-premise and private-cloud installations of our cloud-based scanner. We have deployed our code base on AWS, Google, Azure, multiple on-premise installations and private cloud. Before Mino came along - we had to write and maintain Python libraries for each platform and maintain them. Some of the changes that we make cannot be even tested - because it is deployed on-premise which we dont have access to. Thankfully, we came across Minio. Now we just install minio everywhere and forget about storage. Minio Rocks!</li>
+<li><a href="https://blockai.com/">Blockai</a> - Blockai helps artists claim their copyrights and protects them, for free. It uses Minio for all internal development and testing as an AWS S3 compatible object storage service.</li>
+<li><a href="https://cosmicapp.co.uk/login">Cosmic App</a> - Cosmic App uses Minio for storing client files and quote information for commercial brokers. Files are packaged up for lenders including high street banks to access securely.</li>
+<li><a href="https://crisp.im/en/">Crisp</a> - Crisp is a Customer Intelligence Platform. It helps teams know, understand and communicate with their customers, from multiple channels (chat, email). Minio is used to securely store user file uploads. Files are uploaded from the chatbox, operator dashboard and email attachments. Minio completely replaces S3 and brings more control to user data safety.</li>
+<li><a href="https://dapploy.io/">dapploy</a> - dapploy is a solution to create private app stores to deploy iOS and Android applications to your team, company or organization. Minio is easily integrated with dapploy's architecture and docker environment. Minio is used to store application packages - ipas, apks, icons and images. Minio's great feature among others is the ability to have presigned urls while downloading resources. We use that a lot. Thanks for your good documentation and community.</li>
+<li><a href="https://dbhub.io">DBHub.io</a> - Online storage, visualisation, and collaboration for SQLite databases. Minio is the primary object store for the SQLite databases.</li>
+<li><a href="https://gitlab.com/users/sign_in">GitLab</a> - GitLab is an open source software to collaborate on code.  It uses Minio to store objects in their caching server.</li>
+<li><a href="https://about.mattermost.com/">Mattermost</a> - Mattermost is an open source, self-hosted Slack alternative. It uses minio-go fully to handle S3 API requests.</li>
+<li><a href="https://www.pathio.com">Pathio</a> - Pathio is a version control system for Excel. It uses Minio as an on-premise storage backend for workbooks and json blobs.</li>
+<li><a href="https://quezx.com/">QuezX</a> - QuezX is a recruitment aggregator for connecting employers to recruitment agencies. It uses Minio to store and manage CV's and other documents on their platform.</li>
+<li><a href="http://site.trustvox.com.br">Trustvox</a> - Trustvox is an integrator of ecommerce platforms, ensures 100% valid product reviews, allowing only real buyers to post reviews along with a continuous audit process. The platform team chose Minio to create its own S3 service to avoid infrastructure vendor lock-in, obtaining transparent compatibility with Google Cloud Storage and previous Amazon S3 infrastructures. We tested other options before, and only Minio showed the stable and enterprise-grade results we were looking for.</li>
+<li><a href="https://rocket.chat/">Rocket.Chat</a> - Rocket.Chat is a completely FOSS alternative to Slack. In Rocket.Chat Minio can be used for file uploads — this applies to channels, groups and privately between one user and another.</li>
+</ul>
+<h3 id="content-management-system">Content Management System<a class="headerlink" href="#content-management-system" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://simplesimple.ca">Simple Simple Ads</a> - uses Minio as a compatible object storage server replacement in our development environment. Multiple developers share a local repository of files transparently without having to change any site configuration. This makes developing with <a href="https://www.drupal.org/">Drupal</a> and the <a href="https://www.drupal.org/project/s3fs">s3fs</a> modules very easy. File changes are staged locally and then migrated to Amazon S3 after approval using the mc client utility.</li>
+</ul>
+<h3 id="application-development-services">Application Development Services<a class="headerlink" href="#application-development-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.codium.co">C0D1UM</a> - C0D1UM is a software development firm doing projects on demand and offering operating system infrastructure support. We use <code>minio</code> to secure all confidential data in private network. It was a first choice because major functions are compatible with AWS S3 standard functions.</li>
+<li><a href="https://github.com/Collaborne">Collaborne</a> - Collaborne uses Minio docker containers in development environments to simulate a full AWS S3 environment.</li>
+<li><a href="http://nxsol.com/">nxsol</a> - nxsol specializes in the development of desktop and web-based businesses and personal applications. It uses minio-java client library for Amazon S3 related applications.</li>
+<li><a href="https://toolslib.net">ToolsLib</a> - ToolsLib provides project management services including software hosting for millions of users. Minio fits perfectly in the current infrastructure: its ability to easily scale is a crucial point for ToolsLib services.</li>
+</ul>
+<h3 id="cloud-backup-versioning">Cloud Backup / Versioning<a class="headerlink" href="#cloud-backup-versioning" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.arqbackup.com">Arq</a> - Arq is a storage backend agnostic backup tool for Mac and Windows. Backend services include Amazon Cloud Drive, Google Drive, Dropbox, One Drive, Amazon S3 and more. It also supports 'Other S3-Compatible Services' which means that you can use Minio to build your own backend.</li>
+<li><a href="https://www.backuphive.nl">BackupHive</a> - Providing online backup services from The Netherlands with Minio as an S3 compatible back-end server to store and retrieve files. Minio is very scalable, uses almost no resources itself and is easy to maintain. The awesome team has a strong combined knowledge of use-cases, ranging from the smallest personal project to large scale cross-datacenter setups, all available within a comfortable community.</li>
+<li><a href="https://github.com/mhausenblas/burry.sh">burry</a> - Burry, the BackUp &amp; RecoveRY tool for cloud native infrastructure services enables to backup and restore ZooKeeper, etcd and Consul to and from local storage, Amazon S3, Azure Storage, Google Storage, Minio.</li>
+<li><a href="https://www.cloudberrylab.com/backup/windows-server.aspx">CloudBerry Backup</a> - CloudBerry Backup is used to store files, folders and system images to cloud storage providers. CloudBerry uses Minio for standalone, online and managed backup service.</li>
+<li><a href="https://www.duplicati.com">Duplicati</a> - Duplicati is free, open source, backup software that implements full encryption, compression, and de-duplication that fully obscures backup contents from data hosting providers. It supports S3-compatible services, allowing Minio to server as the backend storage.</li>
+<li><a href="https://pgbackrest.org">pgBackRest</a> - Reliable PostgreSQL Backup &amp; Restore.  Minio can provide repository storage for pgBackrest using the built-in S3 driver.</li>
+<li><a href="https://rclone.org/">rclone</a> - "rsync for cloud storage".  Rclone is a command line application to sync files to and from cloud storage systems and it works well with Minio. Check out <a href="https://rclone.org/s3/">rclone's s3 docs</a> for more information.</li>
+<li><a href="https://restic.github.io">restic</a> - restic is a backup program that is fast, efficient and secure. Check <a href="https://restic.readthedocs.io/en/latest/030_preparing_a_new_repo.html#minio-server">the documentation</a> for instructions on how to backup to a Minio server using restic.</li>
+<li><a href="https://github.com/s3git/s3git">s3git</a> - git for cloud storage. s3git provides distributed version control for data. Create decentralized and versioned repos that scale infinitely to 100s of millions of files. Clone huge PB-scale repos on your local SSD to make changes, commit and push back. Check out <a href="https://github.com/s3git/s3git/blob/master/README.md#integration-with-minio">s3git docs</a> for more information.</li>
+</ul>
+<h3 id="cloud-storage-clients">Cloud Storage Clients<a class="headerlink" href="#cloud-storage-clients" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/rusher81572/cloudExplorer">Cloud Explorer</a> - Cloud Explorer is an open source client written in Java and runs on any OS. It has many unique features such as a a text editor, performance testor, image viewer, search, bucket migrations, music player, IRC client, and much more.</li>
+<li><a href="https://cyberduck.io/">Cyberduck</a> - Cyberduck is an open source client for FTP and SFTP, WebDAV, OpenStack Swift, and Amazon S3, available on Mac OS X and Windows. It supports Minio as an AWS S3 compatible storage.</li>
+<li><a href="https://www.filestash.app">Filestash</a> (<a href="https://demo.filestash.app/">demo</a>) - A Dropbox-like web client that supports Minio as one of the backends.</li>
+<li><a href="https://mountainduck.io/">Mountain Duck</a> - Mountain Duck lets you mount a server and cloud storage as a local disk within the Finder app on Mac and the File Explorer app on Windows. It supports Minio as an AWS S3 compatible storage.</li>
+</ul>
+<h3 id="web-application-framework">Web Application Framework<a class="headerlink" href="#web-application-framework" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/maddevsio/django_minio">Django-Minio</a> - Django is a popular Python web framework. Django-Minio plugin enables use of Minio as an AWS S3 replacement.</li>
+<li><a href="https://github.com/s4kibs4mi/minio-play-rest-api">Minio-Play-Rest-API</a> - Rest API for Minio ( AWS S3 compatible object storage server ) based on Java Play Framework 2.</li>
+</ul>
+<h3 id="minio-as-managed-service">Minio as Managed Service<a class="headerlink" href="#minio-as-managed-service" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.apcera.com/services/types/service-minio/">Apcera</a> - Apcera offers a Minio service gateway to their users. Minio enables Apcera users to spin up a persistent, S3 compatible datastore on any infrastructure with just a single command. Minio provides an open source  AWS S3 alternative for Apcera users.</li>
+</ul>
+<h3 id="compatible-hardware">Compatible Hardware<a class="headerlink" href="#compatible-hardware" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c240-m4-rack-server/index.html">Cisco UCS C240 M4 Rack Server</a> - Cisco 2U DP E5-2600v3 platform with 12x 3.5” drive bays</li>
+<li><a href="http://ark.intel.com/products/88286">Intel® Server System R2312WTTYSR</a> - Intel 2U DP E5-2600v3 platform with 12x 3.5” drive bays</li>
+<li><a href="http://www.hyperscalers.com.au/quanta-qct-server-1u-quantagrid-d51b-2u-buy-quantagridd51b2u-distribution-buy-usa-aus">Quanta Grid D51B-2U (OCP Compliant) </a> - Quanta 2U DP E5-2600v3 platform with 12x 3.5” drive bays</li>
+<li><a href="http://www.supermicro.com/products/system/1U/5018/SSG-5018A-AR12L.cfm?parts=SHOW">SMC 5018A-AR12L (Intel Atom)</a> - SMC 1U SoC Atom C2750 platform with 12x 3.5” drive bays</li>
+</ul>
+<h3 id="file-sharing">File Sharing<a class="headerlink" href="#file-sharing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://pydio.com/">Pydio Cells</a> - Pydio Cells is an open source sync &amp; share platform written in Go. Cells is using Minio as an object storage backend for serving files. It is also compatible with Amazon S3, Azure and other S3 storage providers. Check out <a href="https://github.com/pydio/cells">Pydio Cells repository</a> for more information and/or to contribute.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="local-factory.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: k8s k3s minio argocd argowf" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              k8s k3s minio argocd argowf
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="vault-guide.html" class="md-footer__link md-footer__link--next" aria-label="Next: Vault Guide" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Vault Guide
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.29db7785.min.js"></script>
+      
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+      
+        <script src="https://unpkg.com/mermaid@8.9.0/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
