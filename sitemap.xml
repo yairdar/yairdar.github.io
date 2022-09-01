@@ -131,6 +131,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://yairdar.github.io/guides/ops-services/devops-field/</loc>
+         <lastmod>2022-09-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://yairdar.github.io/guides/ops-services/keycloak-sample/</loc>
          <lastmod>2022-09-01</lastmod>
          <changefreq>daily</changefreq>
@@ -187,11 +192,6 @@
     </url>
     <url>
          <loc>https://yairdar.github.io/guides/ops-tools/date-time/cron-guide/</loc>
-         <lastmod>2022-09-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://yairdar.github.io/resources/devops-field/</loc>
          <lastmod>2022-09-01</lastmod>
          <changefreq>daily</changefreq>
     </url>
