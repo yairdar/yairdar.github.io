@@ -9,21 +9,21 @@
       
       
       
-        <link rel="canonical" href="https://yairdar.github.io/guides/ops-services/devops-field/">
+        <link rel="canonical" href="https://yairdar.github.io/base-tools/taskfile/">
       
-      <link rel="icon" href="../../../assets/favicon.ico">
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.2.3">
     
     
       
-        <title>Devops Field Resources - YairDev</title>
+        <title>Taskfile - YairDev</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.f7f47774.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f7f47774.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -38,7 +38,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -59,7 +59,7 @@
     <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="">
   
     
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#devops-field-resources" class="md-skip">
+        <a href="#taskfile" class="md-skip">
           Skip to content
         </a>
       
@@ -80,9 +80,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="YairDev" class="md-header__button md-logo" aria-label="YairDev" data-md-component="logo">
+    <a href="../.." title="YairDev" class="md-header__button md-logo" aria-label="YairDev" data-md-component="logo">
       
-  <img src="../../../assets/favicon.ico" alt="logo">
+  <img src="../../assets/favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Devops Field Resources
+              Taskfile
             
           </span>
         </div>
@@ -195,7 +195,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../.." class="md-tabs__link">
+    <a href="../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -204,13 +204,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../base-tools/rclone/" class="md-tabs__link">
+      <a href="../rclone/" class="md-tabs__link md-tabs__link--active">
         Base tools
       </a>
     </li>
@@ -231,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../base-tutorials/a-tasker/" class="md-tabs__link">
+      <a href="../../base-tutorials/a-tasker/" class="md-tabs__link">
         Base tutorials
       </a>
     </li>
@@ -246,7 +248,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../contribution/" class="md-tabs__link">
+    <a href="../../contribution/" class="md-tabs__link">
       Contribution
     </a>
   </li>
@@ -254,8 +256,6 @@
       
         
   
-  
-    
   
 
 
@@ -268,7 +268,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../dev-research/cv-research/" class="md-tabs__link md-tabs__link--active">
+      <a href="../../guides/dev-research/cv-research/" class="md-tabs__link">
         Guides
       </a>
     </li>
@@ -299,9 +299,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="YairDev" class="md-nav__button md-logo" aria-label="YairDev" data-md-component="logo">
+    <a href="../.." title="YairDev" class="md-nav__button md-logo" aria-label="YairDev" data-md-component="logo">
       
-  <img src="../../../assets/favicon.ico" alt="logo">
+  <img src="../../assets/favicon.ico" alt="logo">
 
     </a>
     YairDev
@@ -330,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -343,12 +343,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Base tools
@@ -366,7 +368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tools/rclone/" class="md-nav__link">
+      <a href="../rclone/" class="md-nav__link">
         Rclone
       </a>
     </li>
@@ -376,11 +378,154 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../base-tools/taskfile/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Taskfile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Taskfile
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tasfile-for-development-automation" class="md-nav__link">
+    Tasfile for Development Automation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#generic-automation-layer" class="md-nav__link">
+    Generic Automation Layer
+  </a>
+  
+    <nav class="md-nav" aria-label="Generic Automation Layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#heterogeneous-projects" class="md-nav__link">
+    Heterogeneous projects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-agnostic-commands" class="md-nav__link">
+    Project Agnostic Commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-advantages-of-tasker" class="md-nav__link">
+    Key advantages of Tasker
+  </a>
+  
+    <nav class="md-nav" aria-label="Key advantages of Tasker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#human-readable-machine-executable" class="md-nav__link">
+    Human readable, machine executable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#from-simplicity-to-complexity" class="md-nav__link">
+    From simplicity to complexity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-names-that-make-sense" class="md-nav__link">
+    Task names that make sense
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tasker-works-everywhere" class="md-nav__link">
+    Tasker works everywhere
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#easily-parsable-by-other-tools" class="md-nav__link">
+    Easily Parsable by other tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ide-support" class="md-nav__link">
+    IDE support
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shell-completions" class="md-nav__link">
+    Shell completions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    Getting started
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -390,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tools/yq/" class="md-nav__link">
+      <a href="../yq/" class="md-nav__link">
         YQ
       </a>
     </li>
@@ -453,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/" class="md-nav__link">
         Intro Tutorial
       </a>
     </li>
@@ -465,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c01_getting_started/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c01_getting_started/" class="md-nav__link">
         Getting started
       </a>
     </li>
@@ -477,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c02_task_directory/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c02_task_directory/" class="md-nav__link">
         Task Directory
       </a>
     </li>
@@ -489,7 +634,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c03_including_taskfiles/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c03_including_taskfiles/" class="md-nav__link">
         Including Taskfiles
       </a>
     </li>
@@ -501,7 +646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c04_vars/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c04_vars/" class="md-nav__link">
         Variables
       </a>
     </li>
@@ -513,7 +658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c05_env_vars/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c05_env_vars/" class="md-nav__link">
         Environment Variables
       </a>
     </li>
@@ -525,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c06_deps/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c06_deps/" class="md-nav__link">
         Dependencies - Run Tasks in Parallel
       </a>
     </li>
@@ -537,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c07_cli_args/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c07_cli_args/" class="md-nav__link">
         Passing CLI Arguments to the Task
       </a>
     </li>
@@ -549,7 +694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/a-tasker/c08_requests/" class="md-nav__link">
+      <a href="../../base-tutorials/a-tasker/c08_requests/" class="md-nav__link">
         Requests - an Applied Tasker Examples
       </a>
     </li>
@@ -588,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/b-devpod/" class="md-nav__link">
+      <a href="../../base-tutorials/b-devpod/" class="md-nav__link">
         About
       </a>
     </li>
@@ -600,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../base-tutorials/b-devpod/devpod-get-env-ready/" class="md-nav__link">
+      <a href="../../base-tutorials/b-devpod/devpod-get-env-ready/" class="md-nav__link">
         Get Started
       </a>
     </li>
@@ -627,7 +772,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../contribution/" class="md-nav__link">
+      <a href="../../contribution/" class="md-nav__link">
         Contribution
       </a>
     </li>
@@ -640,14 +785,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
       
       <label class="md-nav__link" for="__nav_5">
         Guides
@@ -686,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-research/cv-research/" class="md-nav__link">
+      <a href="../../guides/dev-research/cv-research/" class="md-nav__link">
         CV Research
       </a>
     </li>
@@ -698,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-research/hpo-resources/" class="md-nav__link">
+      <a href="../../guides/dev-research/hpo-resources/" class="md-nav__link">
         HPO
       </a>
     </li>
@@ -710,7 +853,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-research/nlp-research/" class="md-nav__link">
+      <a href="../../guides/dev-research/nlp-research/" class="md-nav__link">
         NLP Articles
       </a>
     </li>
@@ -722,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-research/timeseries-research/" class="md-nav__link">
+      <a href="../../guides/dev-research/timeseries-research/" class="md-nav__link">
         Timeseries research
       </a>
     </li>
@@ -761,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-services/github-guide/" class="md-nav__link">
+      <a href="../../guides/dev-services/github-guide/" class="md-nav__link">
         Github guide
       </a>
     </li>
@@ -773,7 +916,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-services/gitpod-guide/" class="md-nav__link">
+      <a href="../../guides/dev-services/gitpod-guide/" class="md-nav__link">
         gitpod
       </a>
     </li>
@@ -812,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/dev-in-container/" class="md-nav__link">
+      <a href="../../guides/dev-tools/dev-in-container/" class="md-nav__link">
         Developing in container
       </a>
     </li>
@@ -824,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/dev-in-notebook/" class="md-nav__link">
+      <a href="../../guides/dev-tools/dev-in-notebook/" class="md-nav__link">
         Development in notebooks
       </a>
     </li>
@@ -836,7 +979,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dev-tools/vscode-extentions/" class="md-nav__link">
+      <a href="../../guides/dev-tools/vscode-extentions/" class="md-nav__link">
         VSCode Extentions Guide
       </a>
     </li>
@@ -875,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang-python/python-blogs/" class="md-nav__link">
+      <a href="../../guides/lang-python/python-blogs/" class="md-nav__link">
         Python Blogs and REsources
       </a>
     </li>
@@ -887,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../lang-python/python-compile/" class="md-nav__link">
+      <a href="../../guides/lang-python/python-compile/" class="md-nav__link">
         Python Compilation / Packing
       </a>
     </li>
@@ -926,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-cloud/aws-guide/" class="md-nav__link">
+      <a href="../../guides/ops-cloud/aws-guide/" class="md-nav__link">
         Aws Guide
       </a>
     </li>
@@ -938,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-cloud/k3s-guide/" class="md-nav__link">
+      <a href="../../guides/ops-cloud/k3s-guide/" class="md-nav__link">
         K3s guide
       </a>
     </li>
@@ -954,14 +1097,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_6" type="checkbox" id="__nav_5_6" >
       
       <label class="md-nav__link" for="__nav_5_6">
         Ops services
@@ -977,51 +1118,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Devops Field Resources
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../guides/ops-services/devops-field/" class="md-nav__link">
         Devops Field Resources
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#targets-to-taskification" class="md-nav__link">
-    Targets to taskification
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1031,7 +1132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../keycloak-sample/" class="md-nav__link">
+      <a href="../../guides/ops-services/keycloak-sample/" class="md-nav__link">
         Key Cloack Examples
       </a>
     </li>
@@ -1043,7 +1144,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../local-factory/" class="md-nav__link">
+      <a href="../../guides/ops-services/local-factory/" class="md-nav__link">
         k8s k3s minio argocd argowf
       </a>
     </li>
@@ -1055,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../minio-guilde/" class="md-nav__link">
+      <a href="../../guides/ops-services/minio-guilde/" class="md-nav__link">
         Minio Guide
       </a>
     </li>
@@ -1067,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../vault-guide/" class="md-nav__link">
+      <a href="../../guides/ops-services/vault-guide/" class="md-nav__link">
         Vault Guide
       </a>
     </li>
@@ -1106,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/base-tools-intro/" class="md-nav__link">
+      <a href="../../guides/ops-tools/base-tools-intro/" class="md-nav__link">
         Essential Tools
       </a>
     </li>
@@ -1118,7 +1219,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/bash-tests/" class="md-nav__link">
+      <a href="../../guides/ops-tools/bash-tests/" class="md-nav__link">
         yairdar.github.io.publisher
       </a>
     </li>
@@ -1130,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/jq-guide/" class="md-nav__link">
+      <a href="../../guides/ops-tools/jq-guide/" class="md-nav__link">
         JQ guide
       </a>
     </li>
@@ -1142,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/mkdocs-guide/" class="md-nav__link">
+      <a href="../../guides/ops-tools/mkdocs-guide/" class="md-nav__link">
         Mkdocs Guide
       </a>
     </li>
@@ -1154,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/shell-guide/" class="md-nav__link">
+      <a href="../../guides/ops-tools/shell-guide/" class="md-nav__link">
         Shell Guide
       </a>
     </li>
@@ -1166,7 +1267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/taskgo-guide/" class="md-nav__link">
+      <a href="../../guides/ops-tools/taskgo-guide/" class="md-nav__link">
         Taskgo guide
       </a>
     </li>
@@ -1178,7 +1279,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/yaml-guide/" class="md-nav__link">
+      <a href="../../guides/ops-tools/yaml-guide/" class="md-nav__link">
         Yaml Guide
       </a>
     </li>
@@ -1190,7 +1291,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ops-tools/date-time/cron-guide/" class="md-nav__link">
+      <a href="../../guides/ops-tools/date-time/cron-guide/" class="md-nav__link">
         Cron Guide
       </a>
     </li>
@@ -1221,18 +1322,96 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/yairdar/aguide/edit/master/docs/guides/ops-services/devops-field.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/yairdar/aguide/edit/master/docs/base-tools/taskfile.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="devops-field-resources">Devops Field Resources<a class="headerlink" href="#devops-field-resources" title="Permanent link">&para;</a></h1>
+                <h1 id="taskfile">Taskfile<a class="headerlink" href="#taskfile" title="Permanent link">&para;</a></h1>
+<h2 id="tasfile-for-development-automation">Tasfile for Development Automation<a class="headerlink" href="#tasfile-for-development-automation" title="Permanent link">&para;</a></h2>
+<blockquote>
 <ul>
-<li><a href="https://devopscube.com/">https://devopscube.com/</a></li>
+<li>What’s the point of Tasker?</li>
+<li>Human-friendly automation with a smooth learning curve and serious abilities.</li>
 </ul>
-<h2 id="targets-to-taskification">Targets to taskification<a class="headerlink" href="#targets-to-taskification" title="Permanent link">&para;</a></h2>
+</blockquote>
+<p><a href="https://taskfile.dev/">Offical Site</a></p>
+<h2 id="generic-automation-layer">Generic Automation Layer<a class="headerlink" href="#generic-automation-layer" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Taskfile provides unified API for devops needs</p>
+</blockquote>
+<h3 id="heterogeneous-projects">Heterogeneous projects<a class="headerlink" href="#heterogeneous-projects" title="Permanent link">&para;</a></h3>
+<p>Heterogeneous projects are projects, 
+where part of code written in python / cpp / java /  javascript / typescript 
+we have a zoo of “high level tasks definitions”
+Maven, conda, pip, pdm, bower, npm, gradle</p>
+<p>So high level language that connects them all became a jenkins groovy file, 
+or github actions (which is not useful for complex integration tests or MLops needs)</p>
+<h3 id="project-agnostic-commands">Project Agnostic Commands<a class="headerlink" href="#project-agnostic-commands" title="Permanent link">&para;</a></h3>
+<p>With taskfile based automations it doesn't matter what language or build system is used,
+we can always expect the next behavior from project</p>
 <ul>
-<li><a href="https://valohai.com/blog/makefile-ml-project-management/?utm_campaign=Aggressive%20SoMe%20posting%20-%20personal%20accounts%2C%20take%205%20-%20week%2031week&amp;utm_content=216757659&amp;utm_medium=social&amp;utm_source=linkedin&amp;hss_channel=lis-brPdEIwNvY">Valohai still uses Makefiles</a></li>
+<li><code>task build</code></li>
+<li><code>task test</code></li>
+<li><code>task publish</code></li>
+</ul>
+<p>And for integration projects</p>
+<ul>
+<li><code>task fetch-deps</code></li>
+<li><code>task run-integration-tests</code></li>
+<li><code>task deploy</code></li>
+<li><code>task validate</code></li>
+</ul>
+<p>It allows building cross-project tooling without relaying or treating 
+specific use cases for specific build systems, 
+since all the differences are taken care of on the taskfile level. </p>
+<h2 id="key-advantages-of-tasker">Key advantages of Tasker<a class="headerlink" href="#key-advantages-of-tasker" title="Permanent link">&para;</a></h2>
+<h3 id="human-readable-machine-executable">Human readable, machine executable<a class="headerlink" href="#human-readable-machine-executable" title="Permanent link">&para;</a></h3>
+<ul>
+<li>The advantages of YAML for automation</li>
+<li>Like Makefile or bash script, but human readable. Like Markdown docs, but executable. </li>
+</ul>
+<h3 id="from-simplicity-to-complexity">From simplicity to complexity<a class="headerlink" href="#from-simplicity-to-complexity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tasker allows you to make small easy steps first and to achieve more complex behavior by chaining them afterwards.</li>
+</ul>
+<h3 id="task-names-that-make-sense">Task names that make sense<a class="headerlink" href="#task-names-that-make-sense" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Thanks to YAML syntax and description field for each task, it’s easy to track what you’re doing even in complex automations. Just make sure that you give tasks appropriate names and provide explicit descriptions.</li>
+</ul>
+<h3 id="tasker-works-everywhere">Tasker works everywhere<a class="headerlink" href="#tasker-works-everywhere" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A lightweight utility that helps a lot</li>
+<li>You can use Tasker on local machines, servers, Docker containers, CI CD systems like Jenkins or Github Actions.</li>
+<li>Most of the time it’s fairly easy to adapt your Taskfiles for a different platform. Usually you can use them as they are without even editing them, or just adding platform-specific tasks to existing ones.</li>
+</ul>
+<h3 id="easily-parsable-by-other-tools">Easily Parsable by other tools<a class="headerlink" href="#easily-parsable-by-other-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Since tasks are written in YAML, they could be parsed in any language, or even in bash console using tools like yq.</li>
+<li>This opens a new horizons to automation tools (like jenlib)</li>
+<li>This could be used for task security validation by enforcing of some rules for different tasks types</li>
+<li>The very thing that a task is either small bash code blocks or composition of other tasks the verification of such block based code is much simpler than analysis of Makefiles, python scripts, bash scripts or groovy scripts.</li>
+</ul>
+<h3 id="ide-support">IDE support<a class="headerlink" href="#ide-support" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=paulvarache.vscode-taskfile">vscode</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/17058-taskfile">idea</a></li>
+</ul>
+<p>See more community tools at <a href="https://taskfile.dev/community/">https://taskfile.dev/community/</a></p>
+<h3 id="shell-completions">Shell completions<a class="headerlink" href="#shell-completions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>See <a href="https://github.com/yairdar/go-task-completions">go-task-completions</a></li>
+</ul>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Separation of build system from automation DAG.</li>
+<li>Efficient and simple parallelism</li>
+</ul>
+<h2 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://taskfile.dev/installation/">install</a></li>
+<li><a href="https://yairdar.github.io/base-tutorials/a-tasker/">tutorial</a></li>
+<li><a href="https://taskfile.dev/usage/">official docs</a></li>
 </ul>
                 
               
@@ -1253,7 +1432,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../ops-cloud/k3s-guide/" class="md-footer__link md-footer__link--prev" aria-label="Previous: K3s guide" rel="prev">
+        <a href="../rclone/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Rclone" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1262,20 +1441,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              K3s guide
+              Rclone
             </div>
           </div>
         </a>
       
       
         
-        <a href="../keycloak-sample/" class="md-footer__link md-footer__link--next" aria-label="Next: Key Cloack Examples" rel="next">
+        <a href="../yq/" class="md-footer__link md-footer__link--next" aria-label="Next: YQ" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Key Cloack Examples
+              YQ
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1304,10 +1483,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.29db7785.min.js"></script>
+      <script src="../../assets/javascripts/bundle.29db7785.min.js"></script>
       
         <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
       
