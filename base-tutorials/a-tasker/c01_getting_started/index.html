@@ -606,7 +606,7 @@
   
     <li class="md-nav__item">
       <a href="../c08_requests/" class="md-nav__link">
-        Requests - an Applied Tasker Examples
+        Requests - an Applied Taskfile Examples
       </a>
     </li>
   
@@ -1261,7 +1261,7 @@ and <a href="https://taskfile.dev/usage/#calling-another-task">How to Call One T
 <blockquote>
 <p>Open the working directory in terminal (I suggest you to use <code>./working_dir</code>)</p>
 </blockquote>
-<p>First install Tasker according to <a href="https://taskfile.dev/installation">the instructions</a> 
+<p>First install Taskfile according to <a href="https://taskfile.dev/installation">the instructions</a> 
 from the official site. I use <a href="https://taskfile.dev/installation/#install-script">the Install Script</a><br />
 and it works just fine.</p>
 <p>To create a new taskfile in the directory run a command:<br />
@@ -1281,7 +1281,7 @@ Its content will look like this:</p>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">echo &quot;{{.GREETING}}&quot;</span><span class="w"></span>
 <span class="w">    </span><span class="nt">silent</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
 </code></pre></div>
-<p>If you'll run a command <code>task</code> with no arguments, Tasker will run the <code>deafult</code><br />
+<p>If you'll run a command <code>task</code> with no arguments, Taskfile will run the <code>deafult</code><br />
 task, hence it's name.</p>
 <p>To make your own task, type it below the exisiting one. Mind indentations,<br />
 so that task name should be indented the same amount as the <code>default</code> task<br />
@@ -1320,7 +1320,7 @@ so you can call it simply typing <code>task</code>.</p>
 </code></pre></div>
 <p>So far so good. Now let's add the description to our task. First it's a good<br />
 practice to know what the task's doing. Also, even if the task is self-explanatory,<br />
-a description allows Tasker shell completion to work. For simple tasks like this<br />
+a description allows Taskfile shell completion to work. For simple tasks like this<br />
 just add a dummy <code>desc: _</code> line:</p>
 <div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">first-task</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="nt">desc</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">_</span><span class="w"></span>
@@ -1354,7 +1354,7 @@ tasks are in one Taskfile in your working directory and no environment<br />
 variables are involved. But in more complex setups it may lead to confusion,<br />
 so please consider using the native <code>task: taskname</code> method.</p>
 </blockquote>
-<p>Even with this basic toolset Tasker can make life much easier.<br />
+<p>Even with this basic toolset Taskfile can make life much easier.<br />
 But there's much more to it, as you'll see.</p>
 <p><a href="../c02_task_directory/"><strong>Next chapter</strong></a></p>
                 
