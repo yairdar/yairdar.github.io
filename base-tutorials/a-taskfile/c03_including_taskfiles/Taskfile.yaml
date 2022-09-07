@@ -1,0 +1,36 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  from-another-file:
+    taskfile: greet.tasks.yaml
+  from-subdir: ./greet_dir
+  from-nonexisting-file:
+    taskfile: taskfile.thats.not.there.yaml
+    optional: true
+
+vars:
+  GREETING: Here we include an external taskfile and even a folder
+
+tasks:
+  default:
+    desc: See, there's only one default task in this file.
+    cmds:
+      - echo "{{.GREETING}}"
+      - task -a
+    silent: true
+
+  demo:from-nonexisting-file:
+    desc: demonstrates calling task from not existing optional import assert not found
+    cmds:
+    - task from-nonexisting-file:some-task |& grep "not found"
+
+  ### --- Main Ci/Demo Flow ---
+
+  ci-flow:
+    desc: Demo from readme sequence
+    cmds:
+    - task from-another-file:simple-greet
+    - task from-subdir:simple-greet
+    - task demo:from-nonexisting-file
