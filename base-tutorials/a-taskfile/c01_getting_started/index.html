@@ -1347,6 +1347,15 @@ It should call two other tasks that you have written before.<br />
 Voila! Now we can chain tasks and combine them to fit our needs.</p>
 <p>Note:</p>
 <blockquote>
+<p>In example taskfiles you can find <code>ci-flow</code> task that calls another tasks<br />
+exactly like you've just learned to do. This task is there for test purposes:<br />
+you can run it to make sure that all other tasks run properly.<br />
+This is an example or real-world Taskfile applicantion.<br />
+You can make your <code>ci-flow</code> task to call the task sequence for <strong>ci-flow</strong>:<br />
+build, test, deploy and any intermediate steps.</p>
+</blockquote>
+<p>Note:</p>
+<blockquote>
 <p>You can use shell commands in task to call another task, like this:<br />
 <code>- task taskname</code><br />
 but <strong>it's not recommended</strong>. It will work in simple situations when all the<br />
